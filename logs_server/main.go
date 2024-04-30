@@ -32,11 +32,12 @@ func main() {
 }
 
 func functions_EndPoints(router *mux.Router) {
-	router.HandleFunc("/", handlers.GetLogs_handler).Methods("GET")
-	router.HandleFunc("/{appName}", handlers.GetLogsByApp_handler).Methods("GET")
-	router.HandleFunc("/", handlers.AddLogs_handler).Methods("POST")
-
+	
 	router.HandleFunc("/health", handlers.CheckHealth_handler).Methods("GET")
 	router.HandleFunc("/health/live", handlers.CheckLive_handler).Methods("GET")
 	router.HandleFunc("/health/ready", handlers.CheckReady_handler).Methods("GET")
+
+	router.HandleFunc("/all", handlers.GetLogs_handler).Methods("GET")
+	router.HandleFunc("/{appName}", handlers.GetLogsByApp_handler).Methods("GET")
+	router.HandleFunc("/", handlers.AddLogs_handler).Methods("POST")
 }

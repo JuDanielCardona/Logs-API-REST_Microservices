@@ -48,4 +48,4 @@ INSERT INTO users (name, password, email) VALUES
 
 
 
---psql -U admin -d users_db -f init.sql
+-- psql -U admin -d users_db -f init.sql

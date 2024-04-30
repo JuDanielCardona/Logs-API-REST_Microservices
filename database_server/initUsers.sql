@@ -40,4 +40,4 @@ INSERT INTO logs (app_name, log_type, module, log_date_time, summary, descriptio
 ('USERS-API', 'INFO', 'LOGIN', '2024-04-17T11:25:00-05:00', 'Login successful', 'User logged in successfully');
 
 
---psql -U admin -d logs_db -f init.sql
+--  psql -U admin -d logs_db -f init.sql
